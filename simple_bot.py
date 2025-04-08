@@ -1401,6 +1401,9 @@ def main():
     application.add_handler(CommandHandler("list", list_quizzes))
     application.add_handler(CommandHandler("remove", remove_quiz))
     
+    # Add leaderboard command handler (add this line)
+    application.add_handler(CommandHandler("leaderboard", show_leaderboard_command))
+    
     # Add negative marking command handlers
     application.add_handler(CommandHandler("negativemarking", negative_marking_command))
     application.add_handler(CommandHandler("negativevalue", negative_value_command))
@@ -1457,7 +1460,6 @@ def main():
         filters.FORWARDED & filters.POLL | filters.TEXT & ~filters.COMMAND, 
         handle_message
     ))
-    
     # Add callback query handler for button callbacks
     application.add_handler(CallbackQueryHandler(button_callback))
     
