@@ -49,49 +49,50 @@ def load_questions():
         else:
             # Create sample questions if file doesn't exist
             questions = [
-    {
-        "id": 1,
-        "question": "जयपुर की स्थापना किसने की थी?",
-        "options": ["महाराजा सूरजमल", "राणा कुंभा", "सवाई जय सिंह द्वितीय", "राव जोधा"],
-        "answer": 2,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 1,
-        "question": "हल्दीघाटी का युद्ध किसके बीच हुआ था?",
-        "options": ["राणा सांगा और बाबर", "राणा प्रताप और अकबर", "राव जोधा और हुमायूं", "सवाई जय सिंह और औरंगज़ेब"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 1,
-        "question": "चित्तौड़गढ़ दुर्ग किस राज्य से संबंधित है?",
-        "options": ["मारवाड़", "जयपुर", "मेवाड़", "बीकानेर"],
-        "answer": 2,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 1,
-        "question": "कुंभलगढ़ दुर्ग का निर्माण किसने करवाया था?",
-        "options": ["राणा प्रताप", "राणा सांगा", "राणा कुंभा", "राणा उदय सिंह"],
-        "answer": 2,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 1,
-        "question": "बीकानेर की स्थापना किसने की थी?",
-        "options": ["राव बीका", "राव जोधा", "सवाई मानसिंह", "राव चूड़ा"],
-        "answer": 0,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 1,
-        "question": "महाराणा प्रताप का प्रिय घोड़ा कौन था?",
-        "options": ["बादल", "चेतक", "सुरंग", "अर्जुन"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    },
-                save_questions(questions)
+                {
+                    "id": 1,
+                    "question": "जयपुर की स्थापना किसने की थी?",
+                    "options": ["महाराजा सूरजमल", "राणा कुंभा", "सवाई जय सिंह द्वितीय", "राव जोधा"],
+                    "answer": 2,
+                    "category": "Rajasthan History"
+                },
+                {
+                    "id": 2,
+                    "question": "हल्दीघाटी का युद्ध किसके बीच हुआ था?",
+                    "options": ["राणा सांगा और बाबर", "राणा प्रताप और अकबर", "राव जोधा और हुमायूं", "सवाई जय सिंह और औरंगज़ेब"],
+                    "answer": 1,
+                    "category": "Rajasthan History"
+                },
+                {
+                    "id": 3,
+                    "question": "चित्तौड़गढ़ दुर्ग किस राज्य से संबंधित है?",
+                    "options": ["मारवाड़", "जयपुर", "मेवाड़", "बीकानेर"],
+                    "answer": 2,
+                    "category": "Rajasthan History"
+                },
+                {
+                    "id": 4,
+                    "question": "कुंभलगढ़ दुर्ग का निर्माण किसने करवाया था?",
+                    "options": ["राणा प्रताप", "राणा सांगा", "राणा कुंभा", "राणा उदय सिंह"],
+                    "answer": 2,
+                    "category": "Rajasthan History"
+                },
+                {
+                    "id": 5,
+                    "question": "बीकानेर की स्थापना किसने की थी?",
+                    "options": ["राव बीका", "राव जोधा", "सवाई मानसिंह", "राव चूड़ा"],
+                    "answer": 0,
+                    "category": "Rajasthan History"
+                },
+                {
+                    "id": 6,
+                    "question": "महाराणा प्रताप का प्रिय घोड़ा कौन था?",
+                    "options": ["बादल", "चेतक", "सुरंग", "अर्जुन"],
+                    "answer": 1,
+                    "category": "Rajasthan History"
+                }
+            ]
+            save_questions(questions)
             return questions
     except Exception as e:
         logger.error(f"Error loading questions: {e}")
