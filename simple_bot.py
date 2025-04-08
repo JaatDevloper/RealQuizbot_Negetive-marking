@@ -191,21 +191,12 @@ def load_questions():
     }
     
         ]
-            
-                {
-                    "id": 2,
-                    "question": "Which planet is known as the Red Planet?",
-                    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
-                    "answer": 1,  # Mars (0-based index)
-                    "category": "Science"
-                }
-            ]
             save_questions(questions)
             return questions
     except Exception as e:
         logger.error(f"Error loading questions: {e}")
         return []
-
+            
 def save_questions(questions):
     """Save questions to the JSON file"""
     try:
