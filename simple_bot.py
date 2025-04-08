@@ -2301,6 +2301,7 @@ async def handle_poll_id_selection(update: Update, context: ContextTypes.DEFAULT
         # Set flag to wait for ID
         context.user_data["awaiting_poll_id"] = True
 
+
 """
 Leaderboard Module for Telegram Quiz Bot
 
@@ -2497,9 +2498,6 @@ async def show_leaderboard_command(update, context):
     Handler function for the /leaderboard command in Telegram
     
     This function can be called from your Telegram bot to display the leaderboard.
-    Example usage in your bot code:
-    
-    application.add_handler(CommandHandler("leaderboard", show_leaderboard_command))
     """
     command_args = context.args
     quiz_id = None  # Default to showing all quizzes
@@ -2513,9 +2511,16 @@ async def show_leaderboard_command(update, context):
             return
     
     # Generate and send the leaderboard
-    leaderboard_message = generate_leaderboard_message(quiz_id)
-    await update.message.reply_text(leaderboard_message, parse_mode='Markdown')
+    leaderboard_msg = generate_leaderboard_message(quiz_id)
+    await update.message.reply_text(leaderboard_msg, parse_mode='Markdown')
+
+
+
+ 
     
+    
+        
+        
 
 
 
