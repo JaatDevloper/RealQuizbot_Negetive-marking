@@ -9,7 +9,7 @@ import logging
 import re
 import requests
 from urllib.parse import urlparse
-from leaderboard_module import
+from leaderboard_module import show_leaderboard_command, record_quiz_result, generate_leaderboard_message
 from telegram import Update, Poll, ReplyKeyboardRemove, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     Application, CommandHandler, ContextTypes, PollHandler, CallbackQueryHandler,
