@@ -57,146 +57,46 @@ def load_questions():
         "category": "Rajasthan History"
     },
     {
-        "id": 2,
+        "id": 1,
         "question": "हल्दीघाटी का युद्ध किसके बीच हुआ था?",
         "options": ["राणा सांगा और बाबर", "राणा प्रताप और अकबर", "राव जोधा और हुमायूं", "सवाई जय सिंह और औरंगज़ेब"],
         "answer": 1,
         "category": "Rajasthan History"
     },
     {
-        "id": 3,
+        "id": 1,
         "question": "चित्तौड़गढ़ दुर्ग किस राज्य से संबंधित है?",
         "options": ["मारवाड़", "जयपुर", "मेवाड़", "बीकानेर"],
         "answer": 2,
         "category": "Rajasthan History"
     },
     {
-        "id": 4,
+        "id": 1,
         "question": "कुंभलगढ़ दुर्ग का निर्माण किसने करवाया था?",
         "options": ["राणा प्रताप", "राणा सांगा", "राणा कुंभा", "राणा उदय सिंह"],
         "answer": 2,
         "category": "Rajasthan History"
     },
     {
-        "id": 5,
+        "id": 1,
         "question": "बीकानेर की स्थापना किसने की थी?",
         "options": ["राव बीका", "राव जोधा", "सवाई मानसिंह", "राव चूड़ा"],
         "answer": 0,
         "category": "Rajasthan History"
     },
     {
-        "id": 6,
+        "id": 1,
         "question": "महाराणा प्रताप का प्रिय घोड़ा कौन था?",
         "options": ["बादल", "चेतक", "सुरंग", "अर्जुन"],
         "answer": 1,
         "category": "Rajasthan History"
     },
-    {
-        "id": 7,
-        "question": "मेवाड़ की राजधानी पहले कहाँ थी?",
-        "options": ["जयपुर", "चित्तौड़गढ़", "अजमेर", "बूंदी"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 8,
-        "question": "मेवाड़ की राजधानी चित्तौड़ से उदयपुर किसने स्थानांतरित की?",
-        "options": ["राणा सांगा", "राणा प्रताप", "राणा कुंभा", "राणा उदय सिंह"],
-        "answer": 3,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 9,
-        "question": "‘विजय स्तंभ’ कहाँ स्थित है?",
-        "options": ["जैसलमेर", "चित्तौड़गढ़", "उदयपुर", "जयपुर"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 10,
-        "question": "‘विजय स्तंभ’ का निर्माण किसने करवाया था?",
-        "options": ["राणा प्रताप", "राणा कुंभा", "राणा सांगा", "महाराजा मानसिंह"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 11,
-        "question": "जोधपुर किस राजवंश की राजधानी थी?",
-        "options": ["राठौड़", "सिसोदिया", "चौहान", "परमार"],
-        "answer": 0,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 12,
-        "question": "जयपुर किस वंश की राजधानी थी?",
-        "options": ["सिसोदिया", "राठौड़", "कछवाहा", "चौहान"],
-        "answer": 2,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 13,
-        "question": "‘जसवंत थड़ा’ कहाँ स्थित है?",
-        "options": ["उदयपुर", "जोधपुर", "बीकानेर", "चित्तौड़"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 14,
-        "question": "हल्दीघाटी युद्ध किस वर्ष में हुआ था?",
-        "options": ["1567", "1576", "1556", "1582"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 15,
-        "question": "‘रणथंभौर दुर्ग’ किस जिले में स्थित है?",
-        "options": ["कोटा", "झालावाड़", "सवाई माधोपुर", "अलवर"],
-        "answer": 2,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 16,
-        "question": "महाराणा प्रताप का जन्म किस स्थान पर हुआ था?",
-        "options": ["चित्तौड़", "उदयपुर", "कुंभलगढ़", "नाथद्वारा"],
-        "answer": 2,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 17,
-        "question": "अकबर ने चित्तौड़गढ़ पर आक्रमण कब किया?",
-        "options": ["1568", "1576", "1557", "1580"],
-        "answer": 0,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 18,
-        "question": "बीकानेर राज्य की स्थापना कब हुई थी?",
-        "options": ["1465", "1488", "1501", "1450"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 19,
-        "question": "‘सोनार किला’ किस शहर में स्थित है?",
-        "options": ["जैसलमेर", "जयपुर", "बीकानेर", "अलवर"],
-        "answer": 0,
-        "category": "Rajasthan History"
-    },
-    {
-        "id": 20,
-        "question": "चित्तौड़ की पहली जौहर किसके समय हुई?",
-        "options": ["राणा कुंभा", "राणा रतन सिंह", "राणा सांगा", "राणा प्रताप"],
-        "answer": 1,
-        "category": "Rajasthan History"
-    }
-    
-        ]
-            save_questions(questions)
+                save_questions(questions)
             return questions
     except Exception as e:
         logger.error(f"Error loading questions: {e}")
         return []
-            
+                
 def save_questions(questions):
     """Save questions to the JSON file"""
     try:
