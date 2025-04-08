@@ -770,8 +770,79 @@ async def handle_poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE)
         else:
             feedback_message += f"\nYour answer rating remains {points}"
     
-    # Add play again prompt
-    feedback_message += "\n\nReady for another? /play"
+    # Track correct answers for quiz session
+    if context.user_data.get("current_quiz_session") and is_correct:
+        context.user_data["correct_answers"] = context.user_data.get("correct_answers", 0) + 1
+    
+    # Check if this is a marathon quiz
+    marathon_questions = context.user_data.get("marathon_questions", [])
+    if not marathon_questions and context.user_data.get("current_quiz_session"):
+        # This was the last question, show the leaderboard
+        quiz_id = context.user_data.get("quiz_id", 1)
+        
+        # Record the final result for the leaderboard
+        from leaderboard_module import record_quiz_result, generate_leaderboard_message
+        from datetime import datetime
+        
+        # Calculate final score
+        total_questions = context.user_data.get("total_questions", 1)
+        correct_answers = context.user_data.get("correct_answers", 0)
+        final_score = correct_answers
+        if negative_marking:
+            wrong_answers = total_questions - correct_answers
+            final_score -= (wrong_answers * negative_ratio)
+        
+        # Record result with timing info
+        start_time = context.user_data.get("quiz_start_time")
+        end_time = datetime.now()
+        record_quiz_result(
+            quiz_id=quiz_id,
+            user_id=user_id,
+            user_name=user_name,
+            score=final_score,
+            correct_answers=correct_answers,
+            total_questions=total_questions,
+            start_time=start_time,
+            end_time=end_time
+        )
+        
+        # Generate and send leaderboard to the group/chat where the quiz was played
+        leaderboard_msg = generate_leaderboard_message(quiz_id)
+        chat_id = context.user_data.get("marathon_chat_id", update.effective_chat.id)
+        
+        # Send to both the group and private chat to ensure visibility
+        try:
+            await context.bot.send_message(
+                chat_id=chat_id,
+                text=leaderboard_msg,
+                parse_mode='Markdown'
+            )
+        except Exception as e:
+            logger.error(f"Failed to send leaderboard to chat {chat_id}: {e}")
+        
+        # Also send privately to the user who completed the quiz
+        if chat_id != user_id:
+            try:
+                await context.bot.send_message(
+                    chat_id=user_id,
+                    text=leaderboard_msg,
+                    parse_mode='Markdown'
+                )
+            except Exception as e:
+                logger.error(f"Failed to send leaderboard to user {user_id}: {e}")
+        
+        # Clear session data
+        context.user_data.pop("current_quiz_session", None)
+        context.user_data.pop("quiz_id", None)
+        context.user_data.pop("total_questions", None)
+        context.user_data.pop("correct_answers", None)
+        context.user_data.pop("quiz_start_time", None)
+        
+        # Add play again prompt to feedback
+        feedback_message += "\n\nQuiz completed! Leaderboard has been shown."
+    else:
+        # Still more questions or not a marathon quiz
+        feedback_message += "\n\nReady for another? /play"
     
     # Send feedback message
     await context.bot.send_message(
