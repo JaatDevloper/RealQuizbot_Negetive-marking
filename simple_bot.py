@@ -190,7 +190,7 @@ def load_questions():
         "category": "Rajasthan History"
     }
     
-            ]
+        ]
             
                 {
                     "id": 2,
